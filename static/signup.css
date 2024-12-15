@@ -1,0 +1,16 @@
+i {
+    margin: -40px 0 0 320px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.link {
+    float: right;
+    color: black;
+    margin-right: 8px;
+}
+
+.link a {
+    text-decoration: none;
+    color: #007BFF;
+}
