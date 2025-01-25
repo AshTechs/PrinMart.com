@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PrinMart SIMS SA Login</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="static/styles.css">
-    <link rel="stylesheet" href="static/login.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='login.css')}}">
 
 </head>
 <body>
@@ -31,7 +31,7 @@
 
                 <h2>Super Admin’s Login</h2>
 
-                <form>
+                <form action="/admin/SuperAdlogin" id="login-form" method="POST">
 
                     <label for="name">Admin Name</label>
                     <input type="text" id="name" name="student-id" placeholder="Type Your Name">
@@ -44,7 +44,7 @@
         
                     <a href="#" class="forgot-password">Forgot password?</a>
                     
-                    <p class="link">Signup <a href="SuperAdsignup.html">here</a></p>
+                    <p class="link">Signup <a href="{{ url_for('admin.register_super_admin') }}">here</a></p>
 
                     <button type="submit" class="login-button">Login</button>
                 </form>
@@ -52,8 +52,8 @@
         </div>
     </div>
 
-    <script src="static/togglePassword.js"></script>
-    <script src="static/login.js"></script>
+    <script src="{{ url_for('static', filename='togglePassword.js') }}"></script>
+    <script src="{{ url_for('static', filename='login.js') }}"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
 </body>
