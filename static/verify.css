@@ -1,3 +1,18 @@
+:root {
+    --primary-color: #101828;
+    --secondary-color: #EF9360;
+    --tertiary-color: #FFF;
+    --text-light: #98A2B3;
+    --select: #1D2939;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
 .otp-inputs {
     display: flex;
     justify-content: center;
@@ -15,7 +30,7 @@
 #resend-btn {
     margin-top: 15px;
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: var(--primary-color);
     color: white;
     border: none;
     border-radius: 5px;
@@ -24,7 +39,7 @@
 
 #resend-btn:enabled {
     cursor: pointer;
-    background-color: #0056b3;
+    background-color: var(--primary-color);
 }
 
 #rror-message {
