@@ -1,4 +1,12 @@
 /* Basic Reset */
+:root {
+    --primary-color: #101828;
+    --secondary-color: #EF9360;
+    --tertiary-color: #FFF;
+    --text-light: #98A2B3;
+    --white: #ffff;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -17,7 +25,7 @@
 /* Left Section */
 .left-section {
     border-radius: 24px;
-    background: linear-gradient(180deg, rgba(0, 112, 186, 0.00) 0%, #0070BA 72%), url('img/welc.jpg') lightgray 50% / cover no-repeat;
+    background: linear-gradient(180deg, rgba(0, 112, 186, 0.00) 0%, var(--primary-color) 72%), url('img/welc.jpg') lightgray 50% / cover no-repeat;
     display: inline-flex;
     height: 992px;
     padding: 729px 99px 49px 74px;
@@ -28,7 +36,7 @@
 
 .left-section h1 {
     font-size: 2rem;
-    background-color: rgb(0 112 186);
+    background-color: var(--primary-color);
     padding: 10px 5px;
     width: 100%; 
     color: white; 
@@ -37,7 +45,7 @@
 
 .left-section p {
     font-size: 24px;
-    background-color: rgb(0 112 186);
+    background-color: var(--primary-color);
     padding: 10px;
     font-weight: 500;
     color: white;
