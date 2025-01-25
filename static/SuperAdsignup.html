@@ -27,31 +27,39 @@
                 <div class="text">PrinMart  <span>SIMS</span></div>
             </div>
 
-            <!--Login-->
+            <!--SignUp-->
             <div class="login-container">
                 <h2>Super Admin’s SignUp</h2>
-                <form id="signup-form">
-                    <label for="SuperAd">Admin Full Name</label>
-                    <input type="text" id="admin-name" name="admin-name" placeholder="Type your full name" required>
+                <form action="{{ url_for('admin.register_super_admin') }}" method="POST">
+                    <label for="email">Admin Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Type your full name" autocomplete="on">
                 
-                    <label for="SuperAd">Email</label>
-                    <input type="email" id="admin-email" name="admin-email" placeholder="example@gmail.com" required>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="example@gmail.com" autocomplete="on">
                 
                     <label for="password">Password</label>
                     <input type="password" id="password" name="password" placeholder="Enter password" required>
                 
-                    <label for="repeat-password">Repeat Password</label>
-                    <input type="password" id="repeat-password" name="repeat-password" placeholder="Repeat password" required>
-                    <i class="toggle-password fas fa-eye-slash" onclick="togglePassword()"></i>
-                
-                    <button type="button" class="SignUp" id="signup-button">SignUp</button>
+                    <label for="repeat_password">Repeat Password</label>
+                    <input type="password" id="repeat_password" name="repeat_password" placeholder="Repeat password" required>
+                    <i class="toggle-password fas fa-eye-slash" onclick="togglePasswords()"></i>
+                    <p class="link">Login <a href="{{ url_for('admin.super_admin_login') }}">here</a></p>
+                    <button type="button" class="SignUp" id="signup-button">Sign Up</button>
                 </form>
+
+                <p>
+                    Password must be at least 6 characters long and include:
+                </br> - An uppercase letter
+                </br> - A lowercase letter
+                </br>- A number
+                </br>- A special character
+                </p>
                 
             </div>
         </div>
     </div>
 
-    <script src="{{ url_for('static', filename='toggleAdpassword().js') }}"></script>
+    <script src="{{ url_for('static', filename='toggleAdpassword.js') }}"></script>
     <script src="{{ url_for('static', filename='signup.js') }}"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
